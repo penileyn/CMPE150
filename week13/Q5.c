@@ -24,7 +24,7 @@ void sort_print(struct Book lib[], int size){
 	}
 
 	for(i=0; i <size; i++){
-		printf("%d %s %d", i, &lib[i].name, &lib[i].pagecount);
+		printf("%d %s %d", i, lib[i].name, lib[i].pagecount);
 	}
 
 }
@@ -37,7 +37,7 @@ int main(void){
 	struct Book library[N];
 	int i;
 	for(i=0; i <N; i++){
-		scanf("%s %d %d", &library[i].name, &library[i].pagecount, &library[i].price);
+		scanf("%s %d %d", library[i].name, &library[i].pagecount, &library[i].price);
 	}
 
 	sort_print(library, N);
